@@ -9,6 +9,7 @@ const count = ref(0)
 </script>
 
 <template>
+<!-- eslint-disable -->
   <h1>{{ msg }}</h1>
 
   <p>
