@@ -1,10 +1,10 @@
 <script setup>
-
+import HeaderVue from './components/Header.vue';
 </script>
 
 <template>
 <!-- eslint-disable -->
-
+  <HeaderVue/>
   <h5>Bye!!!</h5>
   <h1>Hello Lakshit.</h1>
 </template>
