@@ -1,12 +1,15 @@
 <script setup>
 import Header from './components/Header.vue';
 import OpsPanel from './components/OpsPanel.vue';
+import SearchBar from './components/SearchBar.vue';
+
 </script>
 
 <template>
 <!-- eslint-disable -->
   <Header/>
   <OpsPanel/>
+  <SearchBar/>
 </template>
 
 <style>
