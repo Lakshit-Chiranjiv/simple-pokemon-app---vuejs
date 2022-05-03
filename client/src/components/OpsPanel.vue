@@ -45,13 +45,14 @@ export default {
 } */
 a{
     text-decoration: none;
+    margin: 0 15px;
 }
 button{
     height: 40px;
+    width: 200px;
     padding: 10px;
     border-radius: 5px;
     border: 0;
     cursor: pointer;
-    margin: 10px 15px;
 }
 </style>
