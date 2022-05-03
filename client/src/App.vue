@@ -2,6 +2,7 @@
 import Header from './components/Header.vue';
 import OpsPanel from './components/OpsPanel.vue';
 import SearchBar from './components/SearchBar.vue';
+import AddModal from './components/AddModal.vue';
 
 </script>
 
@@ -10,6 +11,7 @@ import SearchBar from './components/SearchBar.vue';
   <Header/>
   <OpsPanel/>
   <SearchBar/>
+  <AddModal/>
 </template>
 
 <style>
