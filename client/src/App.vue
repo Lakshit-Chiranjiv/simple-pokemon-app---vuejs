@@ -1,12 +1,12 @@
 <script setup>
-import HeaderVue from './components/Header.vue';
+import Header from './components/Header.vue';
+import OpsPanel from './components/OpsPanel.vue';
 </script>
 
 <template>
 <!-- eslint-disable -->
-  <HeaderVue/>
-  <h5>Bye!!!</h5>
-  <h1>Hello Lakshit.</h1>
+  <Header/>
+  <OpsPanel/>
 </template>
 
 <style>
