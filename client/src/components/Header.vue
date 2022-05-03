@@ -2,9 +2,9 @@
 <!-- eslint-disable -->
 <div class="head">
   <h1>Pokemon App</h1>
-  <div class="panelBtn">
+  <!-- <div class="panelBtn">
     <a href="#">+</a>
-  </div>
+  </div> -->
 </div>
 </template>
 
