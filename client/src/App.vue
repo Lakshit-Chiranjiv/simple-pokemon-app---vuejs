@@ -4,6 +4,7 @@ import OpsPanel from './components/OpsPanel.vue';
 import SearchBar from './components/SearchBar.vue';
 import AddModal from './components/AddModal.vue';
 import UpdateModal from './components/UpdateModal.vue';
+import DeleteModal from './components/DeleteModal.vue';
 
 </script>
 
@@ -14,6 +15,7 @@ import UpdateModal from './components/UpdateModal.vue';
   <SearchBar/>
   <AddModal/>
   <UpdateModal/>
+  <DeleteModal/>
 </template>
 
 <style>
