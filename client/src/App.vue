@@ -3,6 +3,7 @@ import Header from './components/Header.vue';
 import OpsPanel from './components/OpsPanel.vue';
 import SearchBar from './components/SearchBar.vue';
 import AddModal from './components/AddModal.vue';
+import UpdateModal from './components/UpdateModal.vue';
 
 </script>
 
@@ -12,6 +13,7 @@ import AddModal from './components/AddModal.vue';
   <OpsPanel/>
   <SearchBar/>
   <AddModal/>
+  <UpdateModal/>
 </template>
 
 <style>
