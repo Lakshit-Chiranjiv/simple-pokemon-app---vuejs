@@ -68,6 +68,13 @@ export default {
     color: white;
     background-color: rgb(72, 197, 61);
     cursor: pointer;
+    opacity: 0.9;
+    transition: all 0.5s ease;
+  }
+
+  button:hover{
+      opacity: 1;
+      transform: scale(1.05);
   }
   
 </style>
