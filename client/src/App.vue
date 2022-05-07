@@ -5,6 +5,7 @@ import SearchBar from './components/SearchBar.vue';
 import AddModal from './components/AddModal.vue';
 import UpdateModal from './components/UpdateModal.vue';
 import DeleteModal from './components/DeleteModal.vue';
+import PokemonCard from './components/PokemonCard.vue';
 
 </script>
 
@@ -16,6 +17,7 @@ import DeleteModal from './components/DeleteModal.vue';
   <AddModal/>
   <UpdateModal/>
   <DeleteModal/>
+  <PokemonCard/>
 </template>
 
 <style>
