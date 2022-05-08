@@ -1,19 +1,27 @@
 <script setup>
-import Header from './components/Header.vue';
-import OpsPanel from './components/OpsPanel.vue';
-import SearchBar from './components/SearchBar.vue';
-import AddModal from './components/AddModal.vue';
-import UpdateModal from './components/UpdateModal.vue';
-import DeleteModal from './components/DeleteModal.vue';
-import PokemonCard from './components/PokemonCard.vue';
-import RandomModal from './components/RandomModal.vue';
+  import Header from './components/Header.vue';
+  import OpsPanel from './components/OpsPanel.vue';
+  import SearchBar from './components/SearchBar.vue';
+  import AddModal from './components/AddModal.vue';
+  import UpdateModal from './components/UpdateModal.vue';
+  import DeleteModal from './components/DeleteModal.vue';
+  import PokemonCard from './components/PokemonCard.vue';
+  import RandomModal from './components/RandomModal.vue';
+  import { ref } from 'vue';
+
+  const openOpsPanel = ref(false);
+
+  const toggleOpsPanel = () => {
+    openOpsPanel.value = !openOpsPanel.value;
+  }
+
 
 </script>
 
 <template>
 <!-- eslint-disable -->
-  <Header/>
-  <OpsPanel/>
+  <Header :toggleOpsPanel="toggleOpsPanel"/>
+  <OpsPanel v-if="openOpsPanel"/>
   <SearchBar/>
   <AddModal/>
   <UpdateModal/>
@@ -31,6 +39,7 @@ import RandomModal from './components/RandomModal.vue';
   color: #2c3e50;
   margin: 0;
   padding: 0;
+  background-color: rgb(56, 56, 56);
 }
 
 button{
