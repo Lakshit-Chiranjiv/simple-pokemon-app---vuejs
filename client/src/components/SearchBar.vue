@@ -1,10 +1,10 @@
 <template>
   <!-- eslint-disable -->
   <div class="searchBarDiv">
-      <button id="name-btn">NAME</button>
-      <button id="type-btn">TYPE</button>
+      <button id="name-btn" :class="{ activeSearch: activeSearchField === 'name' }" @click="toggleActiveSearchToName">NAME</button>
+      <button id="type-btn" :class="{ activeSearch: activeSearchField === 'type' }" @click="toggleActiveSearchToType">TYPE</button>
       <br>
-      <input type="text" name="searchBar" id="pokemonSearchBar" :placeholder="nameSearchPlaceHolder">
+      <input type="text" name="searchBar" id="pokemonSearchBar" :placeholder="activeSearchField==='name' ? nameSearchPlaceHolder : typeSearchPlaceHolder">
   </div>
 </template>
 
@@ -12,8 +12,17 @@
 export default {
     data(){
         return{
-            nameSearchPlaceHolder : "Enter Pokemon Name...",
-            typeSearchPlaceHolder : "Enter Pokemon Type..."
+            nameSearchPlaceHolder: "Enter Pokemon Name...",
+            typeSearchPlaceHolder: "Enter Pokemon Type...",
+            activeSearchField: "name"
+        }
+    },
+    methods : {
+        toggleActiveSearchToName() {
+            this.activeSearchField = 'name';
+        },
+        toggleActiveSearchToType() {
+            this.activeSearchField = 'type';
         }
     }
 }
@@ -45,5 +54,8 @@ export default {
         width: 50%;
         font-size: 20px;
         padding: 8px;
+    }
+    button.activeSearch{
+        background-color: rgb(251, 184, 126);
     }
 </style>
