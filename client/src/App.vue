@@ -32,4 +32,10 @@ import RandomModal from './components/RandomModal.vue';
   margin: 0;
   padding: 0;
 }
+
+button{
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
 </style>
