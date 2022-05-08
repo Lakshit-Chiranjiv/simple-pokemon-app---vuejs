@@ -26,7 +26,6 @@ export default {
     width: 40%;
     background-color: #c3c2c2;
     margin: 10px auto;
-    text-align: left;
   }
   .delModalBtns{
     display: flex;
