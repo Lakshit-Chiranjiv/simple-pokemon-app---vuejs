@@ -43,16 +43,26 @@ export default {
     bottom: 0;
     transition: all 0.6s;
 } */
-a{
-    text-decoration: none;
-    margin: 0 15px;
-}
-button{
-    height: 40px;
-    width: 200px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 0;
-    cursor: pointer;
-}
+    a{
+        text-decoration: none;
+        margin: 0 15px;
+    }
+
+    button{
+        margin: 10px auto;
+        height: 40px;
+        width: 20%;
+        padding: 10px;
+        border: 0;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        opacity: 0.9;
+        transition: all 0.5s ease;
+    }
+
+    button:hover{
+        opacity: 1;
+        transform: scale(1.05);
+    }
 </style>
