@@ -2,14 +2,14 @@
 <!-- eslint-disable -->
 <div class="head">
   <h1>Pokemon App</h1>
-  <div class="panelBtn">
+  <div class="panelBtn" @click="toggleOpsPanel">
     <a href="#">+</a>
   </div>
 </div>
 </template>
 
 <script setup>
-
+  const { toggleOpsPanel } = defineProps(['toggleOpsPanel'])
 </script>
 
 <style scoped>
