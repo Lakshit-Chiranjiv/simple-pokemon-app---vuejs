@@ -6,6 +6,7 @@ import AddModal from './components/AddModal.vue';
 import UpdateModal from './components/UpdateModal.vue';
 import DeleteModal from './components/DeleteModal.vue';
 import PokemonCard from './components/PokemonCard.vue';
+import RandomModal from './components/RandomModal.vue';
 
 </script>
 
@@ -17,6 +18,7 @@ import PokemonCard from './components/PokemonCard.vue';
   <AddModal/>
   <UpdateModal/>
   <DeleteModal/>
+  <RandomModal/>
   <PokemonCard/>
 </template>
 
