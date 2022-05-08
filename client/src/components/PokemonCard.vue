@@ -34,7 +34,7 @@ export default {
     }
 
     h3{
-        font-size: 20px;
+        font-size: 24px;
     }
 
     h3,h5{
@@ -54,7 +54,7 @@ export default {
     }
 
     img{
-    width: 30px;
+    width: 20px;
     cursor: pointer;
     }
     .cardBtns{
@@ -65,7 +65,7 @@ export default {
 
     button{
         height: 40px;
-        width: 30%;
+        width: 20%;
         border: 0;
         border-radius: 5px;
         background-color: #ffffff;
