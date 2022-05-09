@@ -5,6 +5,7 @@
       <button id="type-btn" :class="{ activeSearch: activeSearchField === 'type' }" @click="toggleActiveSearchToType">TYPE</button>
       <br>
       <input type="text" name="searchBar" id="pokemonSearchBar" :placeholder="activeSearchField==='name' ? nameSearchPlaceHolder : typeSearchPlaceHolder">
+      <button class="close">CLOSE</button>
   </div>
 </template>
 
@@ -57,5 +58,21 @@ export default {
     }
     button.activeSearch{
         background-color: rgb(251, 184, 126);
+    }
+
+    .close{
+        background-color: #eb3d3d;
+        color: white;
+        padding: 10px;
+        width: fit-content;
+        border-radius: 5px;
+        margin: 10px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        cursor: pointer;
+        font-weight: normal;
+        border: 0;
     }
 </style>
