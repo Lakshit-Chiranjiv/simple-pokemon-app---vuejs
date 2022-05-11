@@ -35,6 +35,13 @@
   const toggleActiveSearchToType = () => {
     activeSearchField.value = 'type';
   }
+
+  const openAddModal = () => {
+    addModalOpenState.value = true;
+  }
+  const closeAddModal = () => {
+    addModalOpenState.value = false;
+  }
   
 
 </script>
