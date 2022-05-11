@@ -10,19 +10,37 @@
   import { ref } from 'vue';
 
   const openOpsPanel = ref(false);
+  const searchBarState = ref(false);
+  const activeSearchField = ref('name');
 
   const toggleOpsPanel = () => {
     openOpsPanel.value = !openOpsPanel.value;
   }
 
+  const openSearchBar = () => {
+    searchBarState.value = true;
+  }
+
+  const closeSearchBar = () => {
+    searchBarState.value = false;
+  }
+
+  const toggleActiveSearchToName = () => {
+    activeSearchField.value = 'name';
+  }
+  const toggleActiveSearchToType = () => {
+    activeSearchField.value = 'type';
+  }
+  
 
 </script>
 
 <template>
 <!-- eslint-disable -->
   <Header :toggleOpsPanel="toggleOpsPanel"/>
-  <OpsPanel v-if="openOpsPanel"/>
-  <SearchBar/>
+  <OpsPanel v-if="openOpsPanel" :toggleOpsPanel="toggleOpsPanel" :openSearchBar="openSearchBar" 
+  @name-search-btn-clicked="toggleActiveSearchToName" @type-search-btn-clicked="toggleActiveSearchToType"/>
+  <SearchBar v-if="searchBarState" :closeSearchBar="closeSearchBar" :activeSearchField="activeSearchField" :toggleActiveSearchToName="toggleActiveSearchToName" :toggleActiveSearchToType="toggleActiveSearchToType"/>
   <AddModal/>
   <UpdateModal/>
   <DeleteModal/>
@@ -39,7 +57,7 @@
   color: #2c3e50;
   margin: 0;
   padding: 0;
-  background-color: rgb(56, 56, 56);
+  /* background-color: rgb(56, 56, 56); */
 }
 
 button{

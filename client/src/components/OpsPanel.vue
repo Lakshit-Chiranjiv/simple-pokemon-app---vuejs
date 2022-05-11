@@ -2,29 +2,47 @@
   <!-- eslint-disable -->
   <!-- <button id="bt" @click="clickHandle">Open</button> -->
   <div ref="panel">
-      <a href="#"><button :style="{color:'white', backgroundColor: 'green'}">Add Pokemon</button></a>
-      <a href="#"><button :style="{color:'white', backgroundColor: 'orange'}">Search Pokemon Name</button></a>
-      <a href="#"><button :style="{color:'white', backgroundColor: 'blue'}">Search Pokemon Type</button></a>
-      <a href="#"><button :style="{color:'white', backgroundColor: 'purple'}">Generate Random Pokemon</button></a>
+      <a href="#"><button :style="{color:'white', backgroundColor: 'green'}" @click="handleAddBtn">Add Pokemon</button></a>
+      <a href="#"><button :style="{color:'white', backgroundColor: 'orange'}" @click="handleSearchNameBtn">Search Pokemon Name</button></a>
+      <a href="#"><button :style="{color:'white', backgroundColor: 'blue'}" @click="handleSearchTypeBtn">Search Pokemon Type</button></a>
+      <a href="#"><button :style="{color:'white', backgroundColor: 'purple'}" @click="handleGenRandomBtn">Generate Random Pokemon</button></a>
   </div>
 </template>
 
 <script>
 
 export default {
+    props: ['toggleOpsPanel','openSearchBar'],
+    emits: ["nameSearchBtnClicked","typeSearchBtnClicked"],
     methods: {
-        clickHandle() {
-            console.log(45,this.$refs.panel.style.bottom);
-            // this.$refs.panel.style.bottom = '50px';
-            if(!this.$refs.panel.style.bottom || this.$refs.panel.style.bottom=='0px'){
-                this.$refs.panel.style.bottom = '-190px';
-            }
-            else{
-                this.$refs.panel.style.bottom = '0px';
-            }
-                
-            
-        }
+        handleAddBtn() {
+            this.toggleOpsPanel();
+        },
+        handleSearchNameBtn() {
+            this.$emit("nameSearchBtnClicked");
+            this.openSearchBar();
+            this.toggleOpsPanel();
+        },
+        handleSearchTypeBtn() {
+            this.$emit("typeSearchBtnClicked");
+            this.openSearchBar();
+            this.toggleOpsPanel();
+        },
+        handleGenRandomBtn() {
+            this.toggleOpsPanel();
+        },
+
+
+        // clickHandle() {
+        //     console.log(45,this.$refs.panel.style.bottom);
+        //     // this.$refs.panel.style.bottom = '50px';
+        //     if(!this.$refs.panel.style.bottom || this.$refs.panel.style.bottom=='0px'){
+        //         this.$refs.panel.style.bottom = '-190px';
+        //     }
+        //     else{
+        //         this.$refs.panel.style.bottom = '0px';
+        //     }
+        // }
     }
 }
 </script>
