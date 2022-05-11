@@ -42,6 +42,13 @@
   const closeAddModal = () => {
     addModalOpenState.value = false;
   }
+
+  const openUpdateModal = () => {
+    updateModalOpenState.value = true;
+  }
+  const closeUpdateModal = () => {
+    updateModalOpenState.value = false;
+  }
   
 
 </script>
