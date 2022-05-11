@@ -12,6 +12,10 @@
   const openOpsPanel = ref(false);
   const searchBarState = ref(false);
   const activeSearchField = ref('name');
+  const addModalOpenState = ref(false);
+  const updateModalOpenState = ref(false);
+  const deleteModalOpenState = ref(false);
+  const randomModalOpenState = ref(false);
 
   const toggleOpsPanel = () => {
     openOpsPanel.value = !openOpsPanel.value;
@@ -38,13 +42,13 @@
 <template>
 <!-- eslint-disable -->
   <Header :toggleOpsPanel="toggleOpsPanel"/>
-  <OpsPanel v-if="openOpsPanel" :toggleOpsPanel="toggleOpsPanel" :openSearchBar="openSearchBar" 
+  <OpsPanel v-show="openOpsPanel" :toggleOpsPanel="toggleOpsPanel" :openSearchBar="openSearchBar" 
   @name-search-btn-clicked="toggleActiveSearchToName" @type-search-btn-clicked="toggleActiveSearchToType"/>
   <SearchBar v-if="searchBarState" :closeSearchBar="closeSearchBar" :activeSearchField="activeSearchField" :toggleActiveSearchToName="toggleActiveSearchToName" :toggleActiveSearchToType="toggleActiveSearchToType"/>
-  <AddModal/>
-  <UpdateModal/>
-  <DeleteModal/>
-  <RandomModal/>
+  <AddModal v-if="addModalOpenState"/>
+  <UpdateModal v-if="updateModalOpenState"/>
+  <DeleteModal v-show="deleteModalOpenState"/>
+  <RandomModal v-show="randomModalOpenState"/>
   <PokemonCard/>
 </template>
 
