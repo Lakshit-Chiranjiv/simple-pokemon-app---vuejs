@@ -74,7 +74,7 @@
   <AddModal v-if="addModalOpenState" :closeAddModal="closeAddModal"/>
   <UpdateModal v-if="updateModalOpenState"/>
   <DeleteModal v-show="deleteModalOpenState"/>
-  <RandomModal v-show="randomModalOpenState"/>
+  <RandomModal v-show="randomModalOpenState" :closeRandomModal="closeRandomModal"/>
   <PokemonCard/>
 </template>
 

@@ -4,14 +4,14 @@
     <h3>Pikachu</h3>
     <div class="randModalBtn">
         <button>GENERATE ANOTHER</button>
-        <button class="close">X</button>
+        <button class="close" @click="closeRandomModal">X</button>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-
+  props: ['closeRandomModal']
 }
 </script>
 
