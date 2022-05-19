@@ -57,7 +57,12 @@
     deleteModalOpenState.value = false;
   }
 
-
+  const openRandomModal = () => {
+    randomModalOpenState.value = true;
+  }
+  const closeRandomModal = () => {
+    randomModalOpenState.value = false;
+  }
 </script>
 
 <template>
