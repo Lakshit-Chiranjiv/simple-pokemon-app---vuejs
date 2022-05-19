@@ -12,7 +12,7 @@
 <script>
 
 export default {
-    props: ['toggleOpsPanel','openSearchBar','openAddModal'],
+    props: ['toggleOpsPanel','openSearchBar','openAddModal','openRandomModal'],
     emits: ["nameSearchBtnClicked","typeSearchBtnClicked"],
     methods: {
         handleAddBtn() {
@@ -31,6 +31,7 @@ export default {
         },
         handleGenRandomBtn() {
             this.toggleOpsPanel();
+            this.openRandomModal();
         },
 
 

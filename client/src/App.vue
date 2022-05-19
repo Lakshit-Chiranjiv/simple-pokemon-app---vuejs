@@ -69,7 +69,7 @@
 <!-- eslint-disable -->
   <Header :toggleOpsPanel="toggleOpsPanel"/>
   <OpsPanel v-show="openOpsPanel" :toggleOpsPanel="toggleOpsPanel" :openSearchBar="openSearchBar" 
-  @name-search-btn-clicked="toggleActiveSearchToName" @type-search-btn-clicked="toggleActiveSearchToType" :openAddModal="openAddModal"/>
+  @name-search-btn-clicked="toggleActiveSearchToName" @type-search-btn-clicked="toggleActiveSearchToType" :openAddModal="openAddModal" :openRandomModal="openRandomModal"/>
   <SearchBar v-if="searchBarState" :closeSearchBar="closeSearchBar" :activeSearchField="activeSearchField" :toggleActiveSearchToName="toggleActiveSearchToName" :toggleActiveSearchToType="toggleActiveSearchToType"/>
   <AddModal v-if="addModalOpenState" :closeAddModal="closeAddModal"/>
   <UpdateModal v-if="updateModalOpenState"/>
