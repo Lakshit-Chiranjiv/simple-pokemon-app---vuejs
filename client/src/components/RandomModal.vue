@@ -4,6 +4,7 @@
     <h3>Pikachu</h3>
     <div class="randModalBtn">
         <button>GENERATE ANOTHER</button>
+        <button class="close">X</button>
     </div>
   </div>
 </template>
@@ -24,6 +25,7 @@ export default {
     width: 40%;
     background-color: #c3c2c2;
     margin: 10px auto;
+    position: relative;
   }
   .randModalBtns{
     margin: 10px auto;
@@ -45,5 +47,14 @@ export default {
   button:hover{
       opacity: 1;
       transform: scale(1.05);
+  }
+
+  .close{
+    position: absolute;
+    background-color: #f44c4c;
+    height: 30px;
+    width: 30px;
+    top: 5%;
+    right: 5%;
   }
 </style>
