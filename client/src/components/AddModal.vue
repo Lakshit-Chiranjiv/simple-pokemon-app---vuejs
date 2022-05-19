@@ -16,12 +16,13 @@
       <input type="number" name="power" placeholder="Enter pokemon power">
     </div>
     <button>Add Pokemon</button>
+    <button class="close" @click="closeAddModal">X</button>
   </div>
 </template>
 
 <script>
 export default {
-
+  props: ['closeAddModal']
 }
 </script>
 
@@ -36,6 +37,7 @@ export default {
     background-color: rgb(195, 194, 194);
     margin: 10px auto;
     text-align: left;
+    position: relative;
   }
   .addModalContent{
     margin-left: 20px;
@@ -75,6 +77,15 @@ export default {
   button:hover{
       opacity: 1;
       transform: scale(1.05);
+  }
+
+  .close{
+    position: absolute;
+    background-color: #f44c4c;
+    height: 30px;
+    width: 30px;
+    top: 5%;
+    right: 5%;
   }
   
 </style>

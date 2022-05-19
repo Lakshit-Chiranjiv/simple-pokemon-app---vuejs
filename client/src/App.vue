@@ -71,7 +71,7 @@
   <OpsPanel v-show="openOpsPanel" :toggleOpsPanel="toggleOpsPanel" :openSearchBar="openSearchBar" 
   @name-search-btn-clicked="toggleActiveSearchToName" @type-search-btn-clicked="toggleActiveSearchToType" :openAddModal="openAddModal"/>
   <SearchBar v-if="searchBarState" :closeSearchBar="closeSearchBar" :activeSearchField="activeSearchField" :toggleActiveSearchToName="toggleActiveSearchToName" :toggleActiveSearchToType="toggleActiveSearchToType"/>
-  <AddModal v-if="addModalOpenState"/>
+  <AddModal v-if="addModalOpenState" :closeAddModal="closeAddModal"/>
   <UpdateModal v-if="updateModalOpenState"/>
   <DeleteModal v-show="deleteModalOpenState"/>
   <RandomModal v-show="randomModalOpenState"/>
