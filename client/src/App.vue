@@ -50,6 +50,13 @@
     updateModalOpenState.value = false;
   }
   
+  const openDeleteModal = () => {
+    deleteModalOpenState.value = true;
+  }
+  const closeDeleteModal = () => {
+    deleteModalOpenState.value = false;
+  }
+
 
 </script>
 
