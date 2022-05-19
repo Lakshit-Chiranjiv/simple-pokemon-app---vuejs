@@ -12,11 +12,12 @@
 <script>
 
 export default {
-    props: ['toggleOpsPanel','openSearchBar'],
+    props: ['toggleOpsPanel','openSearchBar','openAddModal'],
     emits: ["nameSearchBtnClicked","typeSearchBtnClicked"],
     methods: {
         handleAddBtn() {
             this.toggleOpsPanel();
+            this.openAddModal();
         },
         handleSearchNameBtn() {
             this.$emit("nameSearchBtnClicked");
