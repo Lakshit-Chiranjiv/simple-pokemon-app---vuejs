@@ -5,6 +5,7 @@
       <div class="delModalBtns">
           <button>CANCEL</button>
           <button>DELETE</button>
+          <button class="close">X</button>
       </div>
   </div>
 </template>
@@ -26,6 +27,7 @@ export default {
     width: 40%;
     background-color: #c3c2c2;
     margin: 10px auto;
+    position: relative;
   }
   .delModalBtns{
     display: flex;
@@ -57,6 +59,15 @@ export default {
 
   button:nth-child(2){
       background-color: #fb6363;
+  }
+
+  .close{
+    position: absolute;
+    background-color: #f44c4c;
+    height: 30px;
+    width: 30px;
+    top: 5%;
+    right: 5%;
   }
 
 </style>
