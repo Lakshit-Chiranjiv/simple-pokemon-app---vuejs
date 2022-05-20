@@ -31,6 +31,7 @@ export default {
         color: white;
         padding: 16px 4px;
         border-radius: 16px;
+        box-shadow: 5px 5px 5px 0px rgba(152, 152, 152, 0.75);
     }
 
     h3{
