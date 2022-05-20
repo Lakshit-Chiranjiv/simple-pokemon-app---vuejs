@@ -3,16 +3,16 @@
       <h2>Delete Pokemon??</h2>
       <h3>Pikachu</h3>
       <div class="delModalBtns">
-          <button>CANCEL</button>
+          <button @click="closeDeleteModal">CANCEL</button>
           <button>DELETE</button>
-          <button class="close">X</button>
+          <button class="close" @click="closeDeleteModal">X</button>
       </div>
   </div>
 </template>
 
 <script>
 export default {
-
+  props: ['closeDeleteModal']
 }
 </script>
 

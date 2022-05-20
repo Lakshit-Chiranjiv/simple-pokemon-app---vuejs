@@ -74,7 +74,7 @@
   <SearchBar v-if="searchBarState" :closeSearchBar="closeSearchBar" :activeSearchField="activeSearchField" :toggleActiveSearchToName="toggleActiveSearchToName" :toggleActiveSearchToType="toggleActiveSearchToType"/>
   <AddModal v-if="addModalOpenState" :closeAddModal="closeAddModal"/>
   <UpdateModal v-if="updateModalOpenState" :closeUpdateModal="closeUpdateModal"/>
-  <DeleteModal v-show="deleteModalOpenState"/>
+  <DeleteModal v-show="deleteModalOpenState" :closeDeleteModal="closeDeleteModal"/>
   <RandomModal v-show="randomModalOpenState" :closeRandomModal="closeRandomModal"/>
   <PokemonDisplay :openUpdateModal="openUpdateModal" :openDeleteModal="openDeleteModal"/>
 </template>
