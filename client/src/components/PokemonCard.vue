@@ -2,11 +2,11 @@
   <div class="card">
       <div class="details">
         <div class="nameDetails">
-            <h3>Pikachu</h3>
-            <h5>Electric</h5>
+            <h3>{{name}}</h3>
+            <h5>{{type}}</h5>
         </div>
         <div class="powerDetails">
-            <p>82</p>
+            <p>{{power}}</p>
         </div>
       </div>
       <div class="cardBtns">
@@ -18,7 +18,7 @@
 
 <script>
 export default {
-
+    props: ['name','type','power']
 }
 </script>
 
