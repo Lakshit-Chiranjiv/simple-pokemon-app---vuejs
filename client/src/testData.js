@@ -1,4 +1,4 @@
-export default testData = [
+const testData = [
     {
         name: 'Pikachu',
         type: 'Electric',
@@ -25,3 +25,5 @@ export default testData = [
         power: 71
     }
 ]
+
+export default testData;
