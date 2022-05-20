@@ -10,7 +10,7 @@
         </div>
       </div>
       <div class="cardBtns">
-        <button><img src="./../assets/pencil.png" alt="edit" @click="openUpdateModal"></button>
+        <button @click="openUpdateModal"><img src="./../assets/pencil.png" alt="edit"></button>
         <button><img src="./../assets/delete.png" alt="delete"></button>
       </div>
   </div>
