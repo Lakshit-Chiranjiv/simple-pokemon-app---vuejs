@@ -76,7 +76,7 @@
   <UpdateModal v-if="updateModalOpenState"/>
   <DeleteModal v-show="deleteModalOpenState"/>
   <RandomModal v-show="randomModalOpenState" :closeRandomModal="closeRandomModal"/>
-  <PokemonDisplay/>
+  <PokemonDisplay :openUpdateModal="openUpdateModal"/>
 </template>
 
 <style>
