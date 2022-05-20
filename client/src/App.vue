@@ -7,6 +7,7 @@
   import DeleteModal from './components/DeleteModal.vue';
   import PokemonCard from './components/PokemonCard.vue';
   import RandomModal from './components/RandomModal.vue';
+  import PokemonDisplay from './components/PokemonDisplay.vue';
   import { ref } from 'vue';
 
   const openOpsPanel = ref(false);
@@ -75,7 +76,7 @@
   <UpdateModal v-if="updateModalOpenState"/>
   <DeleteModal v-show="deleteModalOpenState"/>
   <RandomModal v-show="randomModalOpenState" :closeRandomModal="closeRandomModal"/>
-  <PokemonCard/>
+  <PokemonDisplay/>
 </template>
 
 <style>
