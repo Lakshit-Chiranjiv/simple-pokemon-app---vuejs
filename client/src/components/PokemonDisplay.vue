@@ -23,6 +23,5 @@ export default {
 .pokemon-display{
     display: flex;
     flex-wrap: wrap;
-    gap: 1%;
 }
 </style>
