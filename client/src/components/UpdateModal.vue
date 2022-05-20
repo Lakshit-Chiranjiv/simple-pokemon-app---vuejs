@@ -16,13 +16,13 @@
       <input type="number" name="power" placeholder="Enter pokemon power">
     </div>
     <button>Update Pokemon</button>
-    <button class="close">X</button>
+    <button class="close" @click="closeUpdateModal">X</button>
   </div>
 </template>
 
 <script>
 export default {
-
+  props: ['closeUpdateModal']
 }
 </script>
 
