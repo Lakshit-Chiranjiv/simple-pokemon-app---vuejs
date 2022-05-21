@@ -4,18 +4,18 @@
     <h2>Add a Pokemon</h2>
     <div class="addModalContent">
       <label for="name">Pokemon Name</label><br>
-      <input type="text" name="name" placeholder="Enter Pokemon Name"><br>
+      <input type="text" name="name" placeholder="Enter Pokemon Name" v-model="addPokemonName"><br>
       <label for="type">Pokemon Type</label><br>
-      <select name="type">
+      <select name="type" v-model="addPokemonType">
         <option value="grass">Grass</option>
         <option value="fire">Fire</option>
         <option value="water">Water</option>
         <option value="rock">Rock</option>
       </select><br>
       <label for="power">Pokemon Power</label><br>
-      <input type="number" name="power" placeholder="Enter pokemon power">
+      <input type="number" name="power" placeholder="Enter pokemon power" v-model="addPokemonPower">
     </div>
-    <button>Add Pokemon</button>
+    <button @click="handleAddBtnClick">Add Pokemon</button>
     <button class="close" @click="handleClose">X</button>
   </div>
 </template>
@@ -23,10 +23,20 @@
 <script>
 export default {
   props: ['closeAddModal','showPokemonList'],
+  data() {
+    return {
+      addPokemonName: '',
+      addPokemonType: '',
+      addPokemonPower: 0
+    }
+  },
   methods: {
       handleClose(){
           this.closeAddModal();
           this.showPokemonList();
+      },
+      handleAddBtnClick(){
+        console.log(this.addPokemonName,'-',this.addPokemonType,'-',this.addPokemonPower)
       }
   }
 }
