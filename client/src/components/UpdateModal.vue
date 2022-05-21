@@ -4,18 +4,18 @@
     <h2>Update Pokemon</h2>
     <div class="updateModalContent">
       <label for="name">Pokemon Name</label><br>
-      <input type="text" name="name" placeholder="Enter Pokemon Name"><br>
+      <input type="text" name="name" placeholder="Enter Pokemon Name" v-model="updatePokemonName"><br>
       <label for="type">Pokemon Type</label><br>
-      <select name="type">
+      <select name="type" v-model="updatePokemonType">
         <option value="grass">Grass</option>
         <option value="fire">Fire</option>
         <option value="water">Water</option>
         <option value="rock">Rock</option>
       </select><br>
       <label for="power">Pokemon Power</label><br>
-      <input type="number" name="power" placeholder="Enter pokemon power">
+      <input type="number" name="power" placeholder="Enter pokemon power" v-model="updatePokemonPower">
     </div>
-    <button>Update Pokemon</button>
+    <button @click="handleUpdateBtnClick">Update Pokemon</button>
     <button class="close" @click="handleClose">X</button>
   </div>
 </template>
@@ -23,10 +23,20 @@
 <script>
 export default {
   props: ['closeUpdateModal','showPokemonList'],
+  data(){
+    return{
+      updatePokemonName: '',
+      updatePokemonType: '',
+      updatePokemonPower: 0,
+    }
+  },
   methods: {
     handleClose(){
       this.closeUpdateModal();
       this.showPokemonList();
+    },
+    handleUpdateBtnClick(){
+      console.log(this.updatePokemonName,'-',this.updatePokemonType,'-',this.updatePokemonPower)
     }
   }
 }
