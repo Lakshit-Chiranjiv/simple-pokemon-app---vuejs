@@ -4,14 +4,20 @@
     <h3>Pikachu</h3>
     <div class="randModalBtn">
         <button>GENERATE ANOTHER</button>
-        <button class="close" @click="closeRandomModal">X</button>
+        <button class="close" @click="handleClose">X</button>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['closeRandomModal']
+  props: ['closeRandomModal','showPokemonList'],
+  methods: {
+    handleClose(){
+      this.closeRandomModal();
+      this.showPokemonList();
+    }
+  }
 }
 </script>
 
