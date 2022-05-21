@@ -3,16 +3,22 @@
       <h2>Delete Pokemon??</h2>
       <h3>Pikachu</h3>
       <div class="delModalBtns">
-          <button @click="closeDeleteModal">CANCEL</button>
+          <button @click="handleClose">CANCEL</button>
           <button>DELETE</button>
-          <button class="close" @click="closeDeleteModal">X</button>
+          <button class="close" @click="handleClose">X</button>
       </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['closeDeleteModal']
+  props: ['closeDeleteModal','showPokemonList'],
+  methods: {
+    handleClose(){
+      this.closeDeleteModal();
+      this.showPokemonList();
+    }
+  }
 }
 </script>
 
