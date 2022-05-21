@@ -78,13 +78,13 @@
 <!-- eslint-disable -->
   <Header :toggleOpsPanel="toggleOpsPanel"/>
   <OpsPanel v-show="openOpsPanel" :toggleOpsPanel="toggleOpsPanel" :openSearchBar="openSearchBar" 
-  @name-search-btn-clicked="toggleActiveSearchToName" @type-search-btn-clicked="toggleActiveSearchToType" :openAddModal="openAddModal" :openRandomModal="openRandomModal"/>
+  @name-search-btn-clicked="toggleActiveSearchToName" @type-search-btn-clicked="toggleActiveSearchToType" :openAddModal="openAddModal" :openRandomModal="openRandomModal" :hidePokemonList="hidePokemonList"/>
   <SearchBar v-if="searchBarState" :closeSearchBar="closeSearchBar" :activeSearchField="activeSearchField" :toggleActiveSearchToName="toggleActiveSearchToName" :toggleActiveSearchToType="toggleActiveSearchToType"/>
   <AddModal v-if="addModalOpenState" :closeAddModal="closeAddModal"/>
   <UpdateModal v-if="updateModalOpenState" :closeUpdateModal="closeUpdateModal"/>
   <DeleteModal v-show="deleteModalOpenState" :closeDeleteModal="closeDeleteModal"/>
   <RandomModal v-show="randomModalOpenState" :closeRandomModal="closeRandomModal"/>
-  <PokemonDisplay v-show="pokemonListShowState" :openUpdateModal="openUpdateModal" :openDeleteModal="openDeleteModal"/>
+  <PokemonDisplay v-if="pokemonListShowState" :openUpdateModal="openUpdateModal" :openDeleteModal="openDeleteModal"/>
 </template>
 
 <style>

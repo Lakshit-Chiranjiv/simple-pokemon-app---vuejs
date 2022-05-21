@@ -12,26 +12,30 @@
 <script>
 
 export default {
-    props: ['toggleOpsPanel','openSearchBar','openAddModal','openRandomModal'],
+    props: ['toggleOpsPanel','openSearchBar','openAddModal','openRandomModal','hidePokemonList'],
     emits: ["nameSearchBtnClicked","typeSearchBtnClicked"],
     methods: {
         handleAddBtn() {
             this.toggleOpsPanel();
             this.openAddModal();
+            this.hidePokemonList();
         },
         handleSearchNameBtn() {
             this.$emit("nameSearchBtnClicked");
             this.openSearchBar();
             this.toggleOpsPanel();
+            this.hidePokemonList();
         },
         handleSearchTypeBtn() {
             this.$emit("typeSearchBtnClicked");
             this.openSearchBar();
             this.toggleOpsPanel();
+            this.hidePokemonList();
         },
         handleGenRandomBtn() {
             this.toggleOpsPanel();
             this.openRandomModal();
+            this.hidePokemonList();
         },
 
 
