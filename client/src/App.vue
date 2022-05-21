@@ -80,7 +80,7 @@
   <OpsPanel v-show="openOpsPanel" :toggleOpsPanel="toggleOpsPanel" :openSearchBar="openSearchBar" 
   @name-search-btn-clicked="toggleActiveSearchToName" @type-search-btn-clicked="toggleActiveSearchToType" :openAddModal="openAddModal" :openRandomModal="openRandomModal" :hidePokemonList="hidePokemonList"/>
   <SearchBar v-if="searchBarState" :closeSearchBar="closeSearchBar" :activeSearchField="activeSearchField" :toggleActiveSearchToName="toggleActiveSearchToName" :toggleActiveSearchToType="toggleActiveSearchToType" :showPokemonList="showPokemonList"/>
-  <AddModal v-if="addModalOpenState" :closeAddModal="closeAddModal"/>
+  <AddModal v-if="addModalOpenState" :closeAddModal="closeAddModal" :showPokemonList="showPokemonList"/>
   <UpdateModal v-if="updateModalOpenState" :closeUpdateModal="closeUpdateModal"/>
   <DeleteModal v-show="deleteModalOpenState" :closeDeleteModal="closeDeleteModal"/>
   <RandomModal v-show="randomModalOpenState" :closeRandomModal="closeRandomModal"/>

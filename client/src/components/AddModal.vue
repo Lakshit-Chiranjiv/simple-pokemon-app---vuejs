@@ -16,13 +16,19 @@
       <input type="number" name="power" placeholder="Enter pokemon power">
     </div>
     <button>Add Pokemon</button>
-    <button class="close" @click="closeAddModal">X</button>
+    <button class="close" @click="handleClose">X</button>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['closeAddModal']
+  props: ['closeAddModal','showPokemonList'],
+  methods: {
+      handleClose(){
+          this.closeAddModal();
+          this.showPokemonList();
+      }
+  }
 }
 </script>
 
