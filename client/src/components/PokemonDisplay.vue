@@ -1,7 +1,7 @@
 <template>
 <!-- eslint-disable -->
   <div class="pokemon-display">
-      <PokemonCard v-for="a in pokemonList" :name="a.name" :type="a.type" :power="a.power" :openUpdateModal="openUpdateModal" :openDeleteModal="openDeleteModal"/>
+      <PokemonCard v-for="a in pokemonList" :name="a.name" :type="a.type" :power="a.power" :openUpdateModal="openUpdateModal" :openDeleteModal="openDeleteModal" :hidePokemonList="hidePokemonList"/>
   </div>
 </template>
 
@@ -10,7 +10,7 @@ import testData from '../testData'
 import PokemonCard from './PokemonCard.vue'
 
 export default {
-    props: ['openUpdateModal','openDeleteModal'],
+    props: ['openUpdateModal','openDeleteModal','hidePokemonList'],
     data() {
         return {
             pokemonList: testData

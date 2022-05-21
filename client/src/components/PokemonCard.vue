@@ -10,15 +10,25 @@
         </div>
       </div>
       <div class="cardBtns">
-        <button @click="openUpdateModal"><img src="./../assets/pencil.png" alt="edit"></button>
-        <button @click="openDeleteModal"><img src="./../assets/delete.png" alt="delete"></button>
+        <button @click="handleUpdateClick"><img src="./../assets/pencil.png" alt="edit"></button>
+        <button @click="handleDeleteClick"><img src="./../assets/delete.png" alt="delete"></button>
       </div>
   </div>
 </template>
 
 <script>
 export default {
-    props: ['name','type','power','openUpdateModal','openDeleteModal']
+    props: ['name','type','power','openUpdateModal','openDeleteModal','hidePokemonList'],
+    methods: {
+        handleUpdateClick(){
+            this.hidePokemonList();
+            this.openUpdateModal();
+        },
+        handleDeleteClick(){
+            this.hidePokemonList();
+            this.openDeleteModal();
+        }
+    },
 }
 </script>
 
