@@ -5,17 +5,23 @@
       <button id="type-btn" :class="{ activeSearch: activeSearchField === 'type' }" @click="toggleActiveSearchToType">TYPE</button>
       <br>
       <input type="text" name="searchBar" id="pokemonSearchBar" :placeholder="activeSearchField==='name' ? nameSearchPlaceHolder : typeSearchPlaceHolder">
-      <button class="close" @click="closeSearchBar">CLOSE</button>
+      <button class="close" @click="handleClose">CLOSE</button>
   </div>
 </template>
 
 <script>
 export default {
-    props: ['closeSearchBar','activeSearchField','toggleActiveSearchToName','toggleActiveSearchToType'],
+    props: ['closeSearchBar','activeSearchField','toggleActiveSearchToName','toggleActiveSearchToType','showPokemonList'],
     data(){
         return{
             nameSearchPlaceHolder: "Enter Pokemon Name...",
             typeSearchPlaceHolder: "Enter Pokemon Type...",
+        }
+    },
+    methods: {
+        handleClose(){
+            this.closeSearchBar();
+            this.showPokemonList();
         }
     }
 }
