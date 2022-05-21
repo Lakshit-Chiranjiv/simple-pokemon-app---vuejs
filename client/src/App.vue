@@ -81,7 +81,7 @@
   @name-search-btn-clicked="toggleActiveSearchToName" @type-search-btn-clicked="toggleActiveSearchToType" :openAddModal="openAddModal" :openRandomModal="openRandomModal" :hidePokemonList="hidePokemonList"/>
   <SearchBar v-if="searchBarState" :closeSearchBar="closeSearchBar" :activeSearchField="activeSearchField" :toggleActiveSearchToName="toggleActiveSearchToName" :toggleActiveSearchToType="toggleActiveSearchToType" :showPokemonList="showPokemonList"/>
   <AddModal v-if="addModalOpenState" :closeAddModal="closeAddModal" :showPokemonList="showPokemonList"/>
-  <UpdateModal v-if="updateModalOpenState" :closeUpdateModal="closeUpdateModal"/>
+  <UpdateModal v-if="updateModalOpenState" :closeUpdateModal="closeUpdateModal" :showPokemonList="showPokemonList"/>
   <DeleteModal v-show="deleteModalOpenState" :closeDeleteModal="closeDeleteModal"/>
   <RandomModal v-show="randomModalOpenState" :closeRandomModal="closeRandomModal" :showPokemonList="showPokemonList"/>
   <PokemonDisplay v-if="pokemonListShowState" :openUpdateModal="openUpdateModal" :openDeleteModal="openDeleteModal" :hidePokemonList="hidePokemonList"/>
