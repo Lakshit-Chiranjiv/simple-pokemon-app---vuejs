@@ -23,6 +23,16 @@
   const updatePokemonType = ref('')
   const updatePokemonPower = ref(0)
 
+  const setUpdatePokemonName = (nameToSet) => {
+    updatePokemonName.value = nameToSet;
+  }
+  const setUpdatePokemonType = (typeToSet) => {
+    updatePokemonType.value = typeToSet;
+  }
+  const setUpdatePokemonPower = (powerToSet) => {
+    updatePokemonPower.value = powerToSet;
+  }
+
   const toggleOpsPanel = () => {
     openOpsPanel.value = !openOpsPanel.value;
   }
@@ -95,7 +105,7 @@
 
   <RandomModal v-show="randomModalOpenState" :closeRandomModal="closeRandomModal" :showPokemonList="showPokemonList"/>
 
-  <PokemonDisplay v-if="pokemonListShowState" :openUpdateModal="openUpdateModal" :openDeleteModal="openDeleteModal" :hidePokemonList="hidePokemonList"/>
+  <PokemonDisplay v-if="pokemonListShowState" :openUpdateModal="openUpdateModal" :openDeleteModal="openDeleteModal" :hidePokemonList="hidePokemonList" :setUpdatePokemonName="setUpdatePokemonName" :setUpdatePokemonType="setUpdatePokemonType" :setUpdatePokemonPower="setUpdatePokemonPower"/>
   
 </template>
 
