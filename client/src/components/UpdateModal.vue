@@ -22,12 +22,12 @@
 
 <script>
 export default {
-  props: ['closeUpdateModal','showPokemonList'],
+  props: ['closeUpdateModal','showPokemonList','updatePokemonName','updatePokemonType','updatePokemonPower'],
   data(){
     return{
-      updatePokemonName: '',
-      updatePokemonType: '',
-      updatePokemonPower: 0,
+      // updatePokemonName: '',
+      // updatePokemonType: '',
+      // updatePokemonPower: 0,
     }
   },
   methods: {

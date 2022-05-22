@@ -19,6 +19,10 @@
   const randomModalOpenState = ref(false);
   const pokemonListShowState = ref(true);
 
+  const updatePokemonName = ref('')
+  const updatePokemonType = ref('')
+  const updatePokemonPower = ref(0)
+
   const toggleOpsPanel = () => {
     openOpsPanel.value = !openOpsPanel.value;
   }
@@ -85,7 +89,7 @@
 
   <AddModal v-if="addModalOpenState" :closeAddModal="closeAddModal" :showPokemonList="showPokemonList"/>
 
-  <UpdateModal v-if="updateModalOpenState" :closeUpdateModal="closeUpdateModal" :showPokemonList="showPokemonList"/>
+  <UpdateModal v-if="updateModalOpenState" :closeUpdateModal="closeUpdateModal" :showPokemonList="showPokemonList" :updatePokemonName="updatePokemonName" :updatePokemonType="updatePokemonType" :updatePokemonPower="updatePokemonPower"/>
 
   <DeleteModal v-show="deleteModalOpenState" :closeDeleteModal="closeDeleteModal" :showPokemonList="showPokemonList"/>
 
