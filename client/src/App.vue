@@ -23,6 +23,8 @@
   const updatePokemonType = ref('')
   const updatePokemonPower = ref(0)
 
+  const deletePokemonName = ref('')
+
   const setUpdatePokemonName = (nameToSet) => {
     updatePokemonName.value = nameToSet;
   }
@@ -31,6 +33,10 @@
   }
   const setUpdatePokemonPower = (powerToSet) => {
     updatePokemonPower.value = powerToSet;
+  }
+
+  const setDeletePokemonName = (nameToSet) => {
+    deletePokemonName.value = nameToSet;
   }
 
   const toggleOpsPanel = () => {
