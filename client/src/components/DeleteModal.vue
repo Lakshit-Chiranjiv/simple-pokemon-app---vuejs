@@ -4,7 +4,7 @@
       <h3>{{deletePokemonName}}</h3>
       <div class="delModalBtns">
           <button @click="handleClose">CANCEL</button>
-          <button>DELETE</button>
+          <button @click="handleDeleteBtnClick">DELETE</button>
           <button class="close" @click="handleClose">X</button>
       </div>
   </div>
@@ -17,6 +17,9 @@ export default {
     handleClose(){
       this.closeDeleteModal();
       this.showPokemonList();
+    },
+    handleDeleteBtnClick(){
+      console.log(this.deletePokemonName+' will be deleted')
     }
   }
 }
