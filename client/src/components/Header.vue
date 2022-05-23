@@ -2,14 +2,20 @@
 <!-- eslint-disable -->
 <div class="head">
   <h1>Pokemon App</h1>
-  <div class="panelBtn" @click="toggleOpsPanel">
+  <div class="panelBtn" @click="handleOpsBtnClick">
     <a href="#">+</a>
   </div>
 </div>
 </template>
 
 <script setup>
-  const { toggleOpsPanel } = defineProps(['toggleOpsPanel'])
+  const props = defineProps(['openOpsPanel','toggleOpsPanel','setAllStatesToDefault'])
+
+  const handleOpsBtnClick = () => {
+    if(props.openOpsPanel === false)
+      props.setAllStatesToDefault();
+    props.toggleOpsPanel();
+  }
 </script>
 
 <style scoped>

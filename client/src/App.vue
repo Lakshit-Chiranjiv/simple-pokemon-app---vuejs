@@ -92,11 +92,20 @@
   const hidePokemonList = () => {
     pokemonListShowState.value = false;
   }
+
+  const setAllStatesToDefault = () => {
+    closeAddModal();
+    closeUpdateModal();
+    closeSearchBar();
+    closeRandomModal();
+    closeDeleteModal();
+    showPokemonList();
+  }
 </script>
 
 <template>
 <!-- eslint-disable -->
-  <Header :toggleOpsPanel="toggleOpsPanel"/>
+  <Header :openOpsPanel="openOpsPanel" :toggleOpsPanel="toggleOpsPanel" :setAllStatesToDefault="setAllStatesToDefault"/>
 
   <OpsPanel v-show="openOpsPanel" :toggleOpsPanel="toggleOpsPanel" :openSearchBar="openSearchBar" 
   @name-search-btn-clicked="toggleActiveSearchToName" @type-search-btn-clicked="toggleActiveSearchToType" :openAddModal="openAddModal" :openRandomModal="openRandomModal" :hidePokemonList="hidePokemonList"/>
