@@ -18,7 +18,7 @@
 
 <script>
 export default {
-    props: ['name','type','power','openUpdateModal','openDeleteModal','hidePokemonList','setUpdatePokemonName','setUpdatePokemonType','setUpdatePokemonPower'],
+    props: ['name','type','power','openUpdateModal','openDeleteModal','hidePokemonList','setUpdatePokemonName','setUpdatePokemonType','setUpdatePokemonPower','setDeletePokemonName'],
     methods: {
         handleUpdateClick(){
             this.hidePokemonList();
@@ -29,6 +29,7 @@ export default {
         },
         handleDeleteClick(){
             this.hidePokemonList();
+            this.setDeletePokemonName(this.name)
             this.openDeleteModal();
         }
     },
