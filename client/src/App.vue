@@ -43,6 +43,10 @@
     openOpsPanel.value = !openOpsPanel.value;
   }
 
+  const closeOpsPanel = () => {
+    openOpsPanel.value = false;
+  }
+
   const openSearchBar = () => {
     searchBarState.value = true;
   }
