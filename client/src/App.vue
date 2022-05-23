@@ -124,7 +124,7 @@
 
   <RandomModal v-show="randomModalOpenState" :closeRandomModal="closeRandomModal" :showPokemonList="showPokemonList"/>
 
-  <PokemonDisplay v-if="pokemonListShowState" :openUpdateModal="openUpdateModal" :openDeleteModal="openDeleteModal" :hidePokemonList="hidePokemonList" :setUpdatePokemonName="setUpdatePokemonName" :setUpdatePokemonType="setUpdatePokemonType" :setUpdatePokemonPower="setUpdatePokemonPower" :setDeletePokemonName="setDeletePokemonName"/>
+  <PokemonDisplay v-if="pokemonListShowState" :openUpdateModal="openUpdateModal" :openDeleteModal="openDeleteModal" :hidePokemonList="hidePokemonList" :setUpdatePokemonName="setUpdatePokemonName" :setUpdatePokemonType="setUpdatePokemonType" :setUpdatePokemonPower="setUpdatePokemonPower" :setDeletePokemonName="setDeletePokemonName" :closeOpsPanel="closeOpsPanel"/>
   
 </template>
 
