@@ -1,7 +1,7 @@
 <template>
   <div class="delModal">
       <h2>Delete Pokemon??</h2>
-      <h3>Pikachu</h3>
+      <h3>{{deletePokemonName}}</h3>
       <div class="delModalBtns">
           <button @click="handleClose">CANCEL</button>
           <button>DELETE</button>
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  props: ['closeDeleteModal','showPokemonList'],
+  props: ['closeDeleteModal','showPokemonList','deletePokemonName'],
   methods: {
     handleClose(){
       this.closeDeleteModal();

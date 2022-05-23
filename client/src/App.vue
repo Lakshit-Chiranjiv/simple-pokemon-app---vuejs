@@ -107,7 +107,7 @@
 
   <UpdateModal v-if="updateModalOpenState" :closeUpdateModal="closeUpdateModal" :showPokemonList="showPokemonList" :updatePokemonName="updatePokemonName" :updatePokemonType="updatePokemonType" :updatePokemonPower="updatePokemonPower"/>
 
-  <DeleteModal v-show="deleteModalOpenState" :closeDeleteModal="closeDeleteModal" :showPokemonList="showPokemonList"/>
+  <DeleteModal v-show="deleteModalOpenState" :closeDeleteModal="closeDeleteModal" :showPokemonList="showPokemonList" :deletePokemonName="deletePokemonName"/>
 
   <RandomModal v-show="randomModalOpenState" :closeRandomModal="closeRandomModal" :showPokemonList="showPokemonList"/>
 
