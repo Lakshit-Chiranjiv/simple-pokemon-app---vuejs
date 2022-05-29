@@ -4,14 +4,14 @@
       <button id="name-btn" :class="{ activeSearch: activeSearchField === 'name' }" @click="toggleActiveSearchToName">NAME</button>
       <button id="type-btn" :class="{ activeSearch: activeSearchField === 'type' }" @click="toggleActiveSearchToType">TYPE</button>
       <br>
-      <input type="text" name="searchBar" id="pokemonSearchBar" :placeholder="activeSearchField==='name' ? nameSearchPlaceHolder : typeSearchPlaceHolder">
+      <input type="text" name="searchBar" id="pokemonSearchBar" :placeholder="activeSearchField==='name' ? nameSearchPlaceHolder : typeSearchPlaceHolder" v-model="searchText">
       <button class="close" @click="handleClose">CLOSE</button>
   </div>
 </template>
 
 <script>
 export default {
-    props: ['closeSearchBar','activeSearchField','toggleActiveSearchToName','toggleActiveSearchToType','showPokemonList'],
+    props: ['closeSearchBar','activeSearchField','toggleActiveSearchToName','toggleActiveSearchToType','showPokemonList','searchText'],
     data(){
         return{
             nameSearchPlaceHolder: "Enter Pokemon Name...",
